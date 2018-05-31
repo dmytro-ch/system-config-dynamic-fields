@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author Atwix Team
+ * @copyright Copyright (c) 2018 Atwix (https://www.atwix.com/)
+ * @package Atwix_DynamicFields
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="sample" translate="label" sortOrder="50">
+            <label>Sample</label>
+        </tab>
+        <section id="atwix_sample" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <class>separator-top</class>
+            <label>Atwix Sample</label>
+            <tab>sample</tab>
+            <resource>Atwix_DynamicFields::dynamic_fields</resource>
+            <group id="additional" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Additional</label>
+                <field id="emails" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Additional Emails</label>
+                    <frontend_model>Atwix\DynamicFields\Block\Adminhtml\Form\Field\AdditionalEmail</frontend_model>
+                    <backend_model>Atwix\DynamicFields\Config\Backend\AdditionalEmail</backend_model>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
